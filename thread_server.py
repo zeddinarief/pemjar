@@ -25,6 +25,7 @@ def handle_thread(conn):
         	#conn.send(data.encode('ascii'))
         except(socket.error):
         	#tutup koneksi
+            print("koneksi dituup")
             break
         	#conn.close()
 
