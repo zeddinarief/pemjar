@@ -16,6 +16,14 @@ sock.send(data.encode('ascii'))
 data = sock.recv(100)
 data = data.decode('ascii')
 print(data)
+'''
+data2 = input("--> ")
+sock.send(data2.encode('ascii'))
 
+#baca respon dari server
+data2 = sock.recv(100)
+data2 = data2.decode('ascii')
+print(data2)
+'''
 #tutup koneksi
 sock.close()
