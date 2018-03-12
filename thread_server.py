@@ -31,7 +31,7 @@ def handle_thread(conn):
 while True:
 	#menerima permintaan koneksi
     conn, client_addr = sock.accept()
-    #buat thread baru untuk setiap permintaan koneksi
-    #t = threading.Thread(target=handle_thread, args=(conn,))
-    #start thread
-    #t.start()
+    buat thread baru untuk setiap permintaan koneksi
+    t = threading.Thread(target=handle_thread, args=(conn,))
+    start thread
+    t.start()
