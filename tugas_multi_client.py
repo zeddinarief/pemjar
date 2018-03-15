@@ -15,6 +15,7 @@ while True:
 
 	if data == "exit":
 		#tutup koneksi
+		sock.send(data.encode('ascii'))
 		sock.close()
 		break
 	else:
