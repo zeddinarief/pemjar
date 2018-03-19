@@ -17,13 +17,12 @@ while True:
 
 	#terima string dari client
 	data = recv_termination(conn)
-	data = data.decode('ascii')
-	data = 20+data
+	data = "20"+data
 	
 	print(data)
 	
 	#kirim balik respon
-	send_termination(conn,data.encode('ascii'))
+	send_termination(conn,data)
 	#conn.send(data.encode('ascii'))
 	#tutup koneksi
 	conn.close()

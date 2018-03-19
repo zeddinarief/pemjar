@@ -10,12 +10,10 @@ sock.connect( ("127.0.0.1", 6667) )
 
 #kirim data
 data = "jurusan teknik informatika "
-send_size(sock,data)
+send_size(sock, data)
 
-#baca respon dari server
+# Baca data yang dikirim balik oleh server
 data = recv_size(sock)
-data = data.decode('ascii')
 print(data)
 
-#tutup koneksi
 sock.close()

@@ -1,3 +1,4 @@
+import struct
 def send_termination(conn,data):
 	term_char = "\r\n"
 	data = data+term_char
@@ -32,7 +33,6 @@ def send_size(conn,data):
 	conn.send(data)
 
 def recv_size(conn):
-	def recv_size(conn):
     #baca ukuran data int = 4byte
     size = conn.recv(4)
     size = struct.unpack("<I", size)[0]

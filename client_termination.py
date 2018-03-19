@@ -14,7 +14,6 @@ send_termination(sock,data)
 
 #baca respon dari server
 data = recv_termination(sock)
-data = data.decode('ascii')
 print(data)
 
 #tutup koneksi

@@ -1,7 +1,7 @@
 #import socket
 import socket
 import struct
-from fungsi1 import send_termination , recv_termination
+from fungsi1 import send_size , recv_size
 #inisiasi socket
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
@@ -11,19 +11,14 @@ sock.bind( ('0.0.0.0', 6667) )
 #listen sebanyak 100 permintaan
 sock.listen(100)
 
-while True:
-	#menerima permintaan koneksi
-	conn, client_addr = sock.accept()
-
-	#terima string dari client
-	data = recv_termination(conn)
-	data = data.decode('ascii')
-	data = 20+data
-	
-	print(data)
-	
-	#kirim balik respon
-	send_termination(conn,data.encode('ascii'))
-	#conn.send(data.encode('ascii'))
-	#tutup koneksi
-	conn.close()
+while True :
+    # Terima permintaan koneksi
+    conn, client_address = sock.accept()
+    # Terima string dari client
+    data = recv_size(conn)
+    # Tambah "OK"
+    data = "OK "+data
+    # Kirim balik ke client
+    send_size(conn, data)
+    # Tutup koneksi
+    #conn.close()
