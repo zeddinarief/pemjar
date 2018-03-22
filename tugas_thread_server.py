@@ -44,7 +44,7 @@ def handle_thread(conn):
                 conn.send(respon.encode('ascii'))
         except(socket.error):
             #tutup koneksi
-            print("koneksi dituup")
+            print("koneksi ditutup")
             break
             #conn.close()
             

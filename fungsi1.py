@@ -41,3 +41,9 @@ def recv_size(conn):
     #decode
     data = data.decode('ascii')
     return data
+
+def send(conn,data):
+	
+
+def recv(conn):
+	
