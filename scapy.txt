@@ -1,0 +1,12 @@
+a = IP(src="", dst="")
+
+a.show()
+a.summary()
+send(a)
+
+a = IP(src="", dst="")/ICMP()
+
+a = IP(src="", dst="")/TCP(sport= , dport= )
+
+sendrecv packet (ping)
+reply = sr1(a)

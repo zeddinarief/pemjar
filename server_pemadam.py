@@ -4,15 +4,14 @@ import select
 import json
 # Inisiasi socket TCP/IPv4
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-
+sock2 = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 # Bind ke address dan port tertentu
 sock.bind( ('0.0.0.0', 6667) )
-
+sock2.bind( ('0.0.0.0', 6666) )
 # Listen sebanyak 100 permintaan koneksi
 sock.listen(100)
 
 list_monitor = [ sock ]
-#laporan = []
 
 while True :
 
@@ -62,14 +61,3 @@ while True :
                 print("Koneksi ditutup")
                 # Tutup koneksi
                 conn.close()
-'''
-    for conn in outputready:
-        if conn != list_monitor[0] && conn != list_monitor[1]
-
-        else :
-            try:
-                open    
-             except (socket.error):
-                 raise
-'''          
-    

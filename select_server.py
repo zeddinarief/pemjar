@@ -13,7 +13,6 @@ sock.listen(100)
 
 list_monitor = [ sock ]
 
-laporan = []
 while True :
 
     inputready, outputready, errorready = select.select(list_monitor, [ ], [ ])
