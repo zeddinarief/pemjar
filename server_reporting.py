@@ -18,20 +18,6 @@ while True:
 	data = conn.recv(100)
 	data = data.decode('ascii')
 	respon = "ok"
-	'''
-	# [::-1] reverse word
-	data = "OK "+data[::-1]
-
-	data = int(data)
-	if data%2==1:
-		data = "ganjil"
-	else :
-		data = "genap"
-	'''
-		
-	#kirim balik respon
 	print(data)
 	conn.send(respon.encode('ascii'))
-	#conn.send(data.encode('ascii'))
-	#tutup koneksi
 	conn.close()
