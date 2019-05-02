@@ -1,13 +1,13 @@
 from scapy.all import *
 
-srcip = "192.168.137.192"
-dstip = "192.168.137.1"
+srcip = "10.113.1.71"
+dstip = "180.250.177.10"
 '''
 minport = input("port minimal = ")
 maxport = input("port maksimal = ")
 '''
-minport = "78"
-maxport = "83"
+minport = "85"
+maxport = "90"
 list_port = []
 for numport in range(int(minport),int(maxport)):
 	
