@@ -1,5 +1,5 @@
-x =1
-y=2
-x,y,z=x,x,y
-z,y,z=x,y,z
-print(x,y,z)
+lst = ["1", "2", "3", "4"]
+lst.pop(0)
+lst.append("2")
+print(lst)
+print(len(lst))
